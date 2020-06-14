@@ -1,20 +1,19 @@
 ### Date created
-14/06/2020
+15/06/2020
 <h3>US Bike Sharing Co Data Analysis<h3>
 
 ### Description
 The main purpose of this project is to use Python in order to explore data related to a bike sharing company located in the US that operated in three main cities:
-1. United States—Chicago
+1. Chicago
 2. New York City
 3. Washington
 
 ### Files Used
 
 1. bikeshare.py
-2. README.md
-3. chicago.csv
-4. new_york_city.csv
-5. washington.csv
+2. chicago.csv
+3. new_york_city.csv
+4. washington.csv
 
 ### Credits
 
