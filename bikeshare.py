@@ -25,12 +25,12 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     month = input('Which month?: all, January, February, March, April, May or June?\n').lower()
     while month not in ('all', 'january', 'february', 'march', 'april' , 'may', 'june'):
-        month = input('Error: Please make sure you have spelled the month correctly\n').lower()
+        month = input('Error: Please make sure you have chosen one of the following options: all, january, february, march, april , may, june\n').lower()
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day = input('Which day? all, monday, tuesday, wednesday, thursday, friday, saturday, sunday\n').lower()
     while day not in ('all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'):
-        day = input('Error: Please make sure you have spelled the day correctly\n').lower()
-          
+        day = input('Error: Please make sure you have spelled the day correctly or choose all for no filter\n').lower()
+
     print('-'*40)
     return city, month, day
 
@@ -63,7 +63,7 @@ def load_data(city, month, day):
 def time_stats(df,month,day):
     """
     Displays statistics on the most frequent times of travel.
-    
+
     Args:
         (str) df - name of the city to analyze
         (str) month - reads the month input and if it is not all, it does not display the most popular month
@@ -129,11 +129,11 @@ def trip_duration_stats(df):
 def user_stats(df,city):
     """
     Displays statistics on bikeshare users.
-    
+
     Args:
-    
+
         (str) city - Reads the city input and if the city is washington it displays a message saying that the gender and age data is not available.
-   
+
     """
 
     print('\nCalculating User Stats...\n')
@@ -172,7 +172,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df,city)
-        
+
         raw_data = input('\nWould you like to see indivudual date? yes/no.\n')
         n = 0
         while raw_data == 'yes':
@@ -180,7 +180,7 @@ def main():
                 print(row)
                 print('\n')
             raw_data = input('\nWould you like to see more date? yes/no.\n')
-            n +=5     
+            n +=5
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
