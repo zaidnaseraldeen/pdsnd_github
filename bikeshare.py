@@ -1,3 +1,4 @@
+#Refactoring change 1
 import time
 import datetime
 import pandas as pd
@@ -29,7 +30,7 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day = input('Which day? all, monday, tuesday, wednesday, thursday, friday, saturday, sunday\n').lower()
     while day not in ('all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'):
-        day = input('Error: Please make sure you have spelled the day correctly or choose all for no filter\n').lower()
+        day = input('Error: Please make sure you have spelled the day correctly\n').lower()
 
     print('-'*40)
     return city, month, day
